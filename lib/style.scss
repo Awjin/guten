@@ -1,0 +1,316 @@
+html,
+body {
+    background: $color-background;
+    font-family: $font-stack-1;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ol,
+ul {
+    margin-bottom: $whitespace;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-stack-2;
+    font-weight: normal;
+    color: $color-text-light;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: scale-font(3);
+}
+
+h2 {
+    margin-top: scale-margin(2);
+    font-size: scale-font(2);
+}
+
+h3 {
+    margin-top: scale-margin(1);
+    font-size: scale-font(1);
+}
+
+h4 {
+    margin-top: scale-margin(0);
+    font-size: scale-font(0);
+    font-style: italic;
+}
+
+h1 + *,
+h2 + h3,
+h3 + h4 {
+    margin-top: $whitespace * 2;
+}
+
+ol,
+ul {
+    padding-left: $whitespace * 2;
+    list-style: outside;
+
+    ol,
+    ul {
+        margin-bottom: 0;
+        padding-left: $whitespace * 1.5;
+    }
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+li {
+    margin-top: $whitespace * .05;
+    padding-left: 0;
+}
+
+a {
+    color: $color-action;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+code {
+    font-family: $font-stack-3;
+    font-size: $font-size-small;
+}
+
+iframe,
+img,
+figure,
+table {
+    margin: 0;
+    margin-bottom: ($whitespace * 2.33) 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    margin: auto;
+}
+
+img + figcaption {
+    margin: ($whitespace * -1.66) 0 ($whitespace * 2.33) 0;
+}
+
+figcaption {
+    font-size: $font-size-small;
+    font-style: italic;
+    color: $color-text-light;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    font-size: $font-size-small;
+}
+
+caption {
+    margin-top: $whitespace * .5;
+    caption-side: bottom;
+    text-align: left;
+    font-style: italic;
+    color: $color-text-light;
+}
+
+thead,
+tfoot,
+th {
+    background: rgba(0, 0, 0, .1);
+    font-weight: bold;
+    font-family: $font-stack-2;
+}
+
+tr {
+    border: 1px solid $color-text-light;
+}
+
+th,
+td {
+    padding: ($whitespace * .5) ($whitespace * .66);
+    vertical-align: top;
+}
+
+blockquote,
+pre {
+    margin: ($whitespace * 1.33) 0;
+}
+
+blockquote {
+    border-left: 1px solid $color-text-light;
+    padding-left: $whitespace;
+    font-style: italic;
+    color: $color-text-light;
+}
+
+pre {
+    overflow-x: auto;
+    border: 1px solid $color-text-light;
+    padding: ($whitespace * .66) $whitespace ($whitespace * .75) $whitespace;
+    font-size: $font-size-small;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    margin: scale-margin(2) 0;
+    border: none;
+    background: $color-text-light;
+}
+
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+
+html {
+    margin: 0;
+}
+
+body {
+    margin: auto;
+    padding: 15vh 2.5vw 25vh 2.5vw;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.page {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: scale-margin(2);
+    justify-content: center;
+}
+
+.col {
+}
+
+.one {
+    width: 25%;
+    font-size: 75%;
+    padding-top: 5rem;
+
+    opacity: .33;
+    filter: blur(.1vw);
+    transform: scale(.85, .8);
+    transition: filter .2s ease-out,
+                opacity .1s ease-in,
+                transform .1s ease-out;
+
+
+    &:hover {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    ol,
+    ul {
+        margin-bottom: $whitespace / 2;
+    }
+
+    h1 {
+        font-size: scale-font(3) / 2;
+    }
+
+    h2 {
+        margin-top: scale-margin(2) / 2;
+        font-size: scale-font(2) / 2;
+    }
+
+    h3 {
+        margin-top: scale-margin(1) / 2;
+        font-size: scale-font(1) / 2;
+    }
+
+    h4 {
+        margin-top: scale-margin(0) / 2;
+        font-size: scale-font(0) / 2;
+    }
+}
+
+.one + .two,
+.two + .one {
+    padding-left: 5vw;
+}
+
+.two {
+    width: 50%;
+    padding: 0 2.5vw;
+}
+
+.four {
+    width: 100%;
+    padding: 0 2.5vw;
+    font-size: 150%;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    ol,
+    ul {
+        margin-bottom: $whitespace * 2;
+    }
+
+    h1 {
+        font-size: scale-font(3) * 2;
+    }
+
+    h2 {
+        margin-top: scale-margin(2) * 2;
+        font-size: scale-font(2) * 2;
+    }
+
+    h3 {
+        margin-top: scale-margin(1) * 2;
+        font-size: scale-font(1) * 2;
+    }
+
+    h4 {
+        margin-top: scale-margin(0) * 2;
+        font-size: scale-font(0) * 2;
+    }
+}
+
+.left {
+    margin-right: auto;
+    margin-left: 10vw;
+}
+
+.right {
+    margin-right: 10vw;
+    margin-left: auto;
+}
