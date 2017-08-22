@@ -216,10 +216,17 @@ html {
 
 .fullscreen {
     box-sizing: content-box;
-    max-width: 95vw;
-    max-height: 95vh;
     padding: 10vh 0;
-    margin: auto;
+}
+
+.fullscreen > img {
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
+.fullscreen > p {
+    max-width: 80vw;
+    font-size: 160%;
 }
 
 h1,
@@ -233,12 +240,13 @@ p,
 ol,
 ul,
 blockquote,
-pre {
-    width: 50vw;
+pre,
+figcaption {
+    max-width: 50vw;
     margin: $whitespace auto;
     text-align: left;
 }
 
 p {
-    text-indent: 2.5vw;
+    text-indent: 1.5rem;
 }
