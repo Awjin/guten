@@ -23,7 +23,6 @@ h3,
 h4 {
     font-family: $font-stack-2;
     font-weight: normal;
-    color: $color-text-light;
 }
 
 h1 {
@@ -45,12 +44,6 @@ h4 {
     margin-top: scale-margin(0);
     font-size: scale-font(0);
     font-style: italic;
-}
-
-h1 + *,
-h2 + h3,
-h3 + h4 {
-    margin-top: $whitespace * 2;
 }
 
 ol,
@@ -187,130 +180,65 @@ hr {
 
 html {
     margin: 0;
+    padding: 10vh 2.5vw 50vh 2.5vw;
+    padding: 0vh 0 50vh 0;
+    text-align: center;
 }
 
-body {
-    margin: auto;
-    padding: 15vh 2.5vw 25vh 2.5vw;
-    margin: 0;
+.header > * {
+    &:nth-child(1) {
+        margin: 0;
+    }
 }
 
-.wrapper {
+.header {
+    box-sizing: border-box;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    max-width: 100vw;
+    margin: 20vh 0;
+    padding: 20vh 12.5vw;
+    background: $color-text-light;
+    color: $color-background;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 }
 
-.page {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: scale-margin(2);
-    justify-content: center;
+.title {
+    margin-top: 0;
 }
 
-.col {
+.header + .header {
+    min-height: 50vh;
+    margin-top: -20vh;
 }
 
-.one {
-    width: 25%;
-    font-size: 75%;
-    padding-top: 5rem;
-
-    opacity: .33;
-    filter: blur(.1vw);
-    transform: scale(.85, .8);
-    transition: filter .2s ease-out,
-                opacity .1s ease-in,
-                transform .1s ease-out;
-
-
-    &:hover {
-        opacity: 1;
-        filter: blur(0);
-        transform: scale(1);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    ol,
-    ul {
-        margin-bottom: $whitespace / 2;
-    }
-
-    h1 {
-        font-size: scale-font(3) / 2;
-    }
-
-    h2 {
-        margin-top: scale-margin(2) / 2;
-        font-size: scale-font(2) / 2;
-    }
-
-    h3 {
-        margin-top: scale-margin(1) / 2;
-        font-size: scale-font(1) / 2;
-    }
-
-    h4 {
-        margin-top: scale-margin(0) / 2;
-        font-size: scale-font(0) / 2;
-    }
+.fullscreen {
+    box-sizing: content-box;
+    max-width: 95vw;
+    max-height: 95vh;
+    padding: 10vh 0;
+    margin: auto;
 }
 
-.one + .two,
-.two + .one {
-    padding-left: 5vw;
+h1,
+h2,
+h3,
+h4 {
+    line-height: $line-height * .9;
 }
 
-.two {
-    width: 50%;
-    padding: 0 2.5vw;
+p,
+ol,
+ul,
+blockquote,
+pre {
+    width: 50vw;
+    margin: $whitespace auto;
+    text-align: left;
 }
 
-.four {
-    width: 100%;
-    padding: 0 2.5vw;
-    font-size: 150%;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    ol,
-    ul {
-        margin-bottom: $whitespace * 2;
-    }
-
-    h1 {
-        font-size: scale-font(3) * 2;
-    }
-
-    h2 {
-        margin-top: scale-margin(2) * 2;
-        font-size: scale-font(2) * 2;
-    }
-
-    h3 {
-        margin-top: scale-margin(1) * 2;
-        font-size: scale-font(1) * 2;
-    }
-
-    h4 {
-        margin-top: scale-margin(0) * 2;
-        font-size: scale-font(0) * 2;
-    }
-}
-
-.left {
-    margin-right: auto;
-    margin-left: 10vw;
-}
-
-.right {
-    margin-right: 10vw;
-    margin-left: auto;
+p {
+    text-indent: 2.5vw;
 }
