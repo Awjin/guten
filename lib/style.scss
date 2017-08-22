@@ -182,7 +182,6 @@ html {
     margin: 0;
     padding: 10vh 2.5vw 50vh 2.5vw;
     padding: 0vh 0 50vh 0;
-    text-align: center;
 }
 
 .header > * {
@@ -216,7 +215,7 @@ html {
 
 .fullscreen {
     box-sizing: content-box;
-    padding: 10vh 0;
+    margin: 15vh 0;
 }
 
 .fullscreen > img {
@@ -225,8 +224,9 @@ html {
 }
 
 .fullscreen > p {
-    max-width: 80vw;
-    font-size: 160%;
+    max-width: 75vw;
+    padding: 0;
+    font-size: 150%;
 }
 
 h1,
@@ -244,7 +244,7 @@ pre,
 figcaption {
     max-width: 50vw;
     margin: $whitespace auto;
-    text-align: left;
+    padding-left: 12.5vw;
 }
 
 p {
