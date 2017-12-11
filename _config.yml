@@ -1,21 +1,25 @@
 title: "The Adventures of Sherlock Holmes"
-subtitle: "(A Guten Demo)"
-author: "Sir Arthur Conan Doyle"
-publish_date: "Oct 14 1892"
+subtitle: "Published with Guten"
+author: "Arthur Conan Doyle"
+publish_date: "Oct 14, 1892"
 
 lang: "en"
 
 baseurl: "/guten"
 markdown: kramdown
 
-exclude:
-    - Gemfile
-    - Gemfile.lock
+collections:
+    chapters:
+        output: true
 
 defaults:
     -
         scope:
             path: ""
-            type: "pages"
+            type: "chapters"
         values:
             layout: "chapter"
+
+exclude:
+    - Gemfile
+    - Gemfile.lock

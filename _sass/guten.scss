@@ -5,37 +5,25 @@ body {
 }
 
 body {
+    overflow-x: hidden;
     padding-bottom: 40vh;
-}
-
-.header > * {
-    &:nth-child(1) {
-        margin: 0;
-    }
 }
 
 .header {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     min-height: 100vh;
-    max-width: 100vw;
-    // margin: 20vh 0;
     margin-bottom: 20vh;
-    padding: 20vh 10vw;
+    padding: 17.5vh 10vw;
     background: $color-text-light;
     color: $color-background;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .66);
 }
 
-.title {
-    margin-top: 0;
-}
-
-.header + .header {
-    min-height: 50vh;
-    margin-top: -20vh;
+.header > *:nth-child(1) {
+    margin: 0;
 }
 
 .align-right {
@@ -50,8 +38,33 @@ body {
     margin: 15vh 0;
 }
 
+.table-of-contents {
+    margin: auto;
+    max-width: 66vw;
+    padding: 5vh 0;
+
+    h2 {
+        margin-top: -5vh;
+    }
+}
+
+.table-of-contents-item {
+    display: block;
+    padding: 1rem .25rem .9rem .25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .33);
+    color: $color-text-light;
+    transition: all .1s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        margin-right: -1.5rem;
+        padding-left: 1.5rem;
+        text-decoration: none;
+    }
+}
+
 blockquote {
-    box-sizing: content-box;
     margin: 15vh 0;
 
     > img {
@@ -62,14 +75,17 @@ blockquote {
     > p {
         max-width: 80vw;
         padding: 0;
+        line-height: $line-height-small;
         font-size: 150%;
         font-style: normal;
-        line-height: 1.15;
     }
 }
 
-h4 {
-    font-style: normal;
+pre {
+    border: none;
+    > * {
+        font-family: $font-stack-1;
+    }
 }
 
 p,

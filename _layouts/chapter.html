@@ -3,11 +3,10 @@
 {% include head.html %}
 
 <body>
-    <section class="chapter">
-        <div class="header">
-            <h2>{{ page.title }}</h2>
-        </div>
+    <div class="header">
+        <h2>{{ page.chapter }}</h2>
+        <h2 class="align-right">{{ page.title }}</h2>
+    </div>
 
-        {{ content }}
-    </section>
+    {{ content }}
 </body>
