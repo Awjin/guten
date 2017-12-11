@@ -88,18 +88,25 @@ pre {
     }
 }
 
-p,
-ol,
-ul,
-pre,
-figcaption {
-    max-width: 60vw;
-    margin: $responsive-whitespace auto;
-    padding-left: 12.5vw;
-}
+.chapter {
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    ol,
+    ul,
+    pre,
+    figcaption {
+        max-width: 60vw;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 12.5vw;
+    }
 
-p {
-    text-indent: 1.5rem;
+    p {
+        text-indent: 1.5rem;
+    }
 }
 
 img {
