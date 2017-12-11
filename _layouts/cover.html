@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en"}}">
+{% include head.html %}
+
+<body>
+    <div class="header title">
+        <h1>{{ site.title | escape }}</h1>
+        <h2>{{ site.subtitle | escape }}</h2>
+        <br>
+        <h3 class="align-right">By {{ site.author | escape }}</h3>
+        <h4 class="align-right margin-none">Published {{ site.publish_date | escape }}</h4>
+    </div>
+
+    <!-- table of contents here -->
+</body>
+</html>
