@@ -11,6 +11,10 @@
         <h3 class="align-right margin-none">{{ site.publish_date | escape }}</h3>
     </div>
 
+    <div class="cover-content">
+        {{ content }}
+    </div>
+
     <div class="table-of-contents">
         <h2>Table of Contents</h2>
         {% for item in site.chapters %}
